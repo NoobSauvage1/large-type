@@ -74,6 +74,10 @@
     <div id="result">
         <p id="enlarged-text"></p>
     </div>
+    <!-- Add this overlay for portrait mode -->
+    <div id="rotate-notice" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);color:white;display:flex;align-items:center;justify-content:center;font-size:2rem;text-align:center;">
+        Please rotate your device to landscape mode for the best experience.
+    </div>
 
     <script>
         document.querySelector('form').addEventListener('submit', function(event) {
@@ -83,5 +87,18 @@
         });
         
     </script>
+    <script>
+function checkOrientation() {
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+    if (isMobile && window.innerHeight > window.innerWidth) {
+        document.getElementById('rotate-notice').style.display = 'flex';
+    } else {
+        document.getElementById('rotate-notice').style.display = 'none';
+    }
+}
+window.addEventListener('resize', checkOrientation);
+window.addEventListener('orientationchange', checkOrientation);
+window.addEventListener('DOMContentLoaded', checkOrientation);
+</script>
 </body>
 </html>
