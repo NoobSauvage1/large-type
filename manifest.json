@@ -7,7 +7,7 @@
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
-  "orientation": "portrait-primary",
+  "orientation": "portraitlandscape-primary",
   "categories": ["entertainment", "games"],
   "lang": "en",
   "dir": "ltr",
