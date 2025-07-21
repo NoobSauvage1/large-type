@@ -1,6 +1,6 @@
 {
   "name": "Large type",
-  "short_name": "Large type",
+  "short_name": "LargeType",
   "description": "A simple app that enlarges text.",
   "start_url": "/large-type",
   "scope": "/large-type",
